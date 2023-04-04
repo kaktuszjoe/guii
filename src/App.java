@@ -1,3 +1,5 @@
+//Jakabos Ábel
+
 import java.beans.EventHandler;
 
 import javafx.application.Application;
