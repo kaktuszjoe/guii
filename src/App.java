@@ -1,7 +1,7 @@
 import java.beans.EventHandler;
 
 import javafx.application.Application;
-
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -38,12 +38,19 @@ public class App extends Application {
         vb1.getChildren().add(asiField);
         
         hb1.getChildren().add(button);
+        
         vb1.getChildren().add(hb1);
 
         button.setOnAction(e ->{
             Double d = Double.valueOf(asiField.getText());
             Double res = (d*d*d) / 2.82842712475;
+            String str = Double.toString(res);
+            Label kiir = new Label(str);
+            hb1.getChildren().add(kiir);
+            
         });
+
+        
         
         
         Scene scene = new Scene(vb1,400,300);
